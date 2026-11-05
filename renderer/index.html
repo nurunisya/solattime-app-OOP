@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SolatTime - Waktu Solat Malaysia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-overlay"></div>
+
+    <main class="container home">
+
+        <div class="hero-band">
+
+            <header class="topbar">
+                <div class="brand">
+                    <span class="brand-mark" data-icon="moon" data-size="22"></span>
+                    <h1>SolatTime</h1>
+                </div>
+                <div class="topbar-meta"><span data-icon="map-pin" data-size="15"></span> Malaysia • وقت الصلاة</div>
+            </header>
+
+            <section class="hero">
+                <span class="badge">Waktu Solat Tepat • Data JAKIM</span>
+                <h2 class="hero-title">Teman Solat dan Ibadah<br />Harian Anda</h2>
+                <p class="hero-text">
+                    Dapatkan waktu solat yang tepat, kiraan detik ke waktu seterusnya, dan urus senarai semak
+                    ibadah harian anda.
+                </p>
+
+                <div class="search-card zone-card">
+                    <h2>Pilih Zon Anda</h2>
+                    <div class="zone-form">
+                        <label for="zoneSelect" class="sr-only">Zon waktu solat</label>
+                        <select id="zoneSelect">
+                            <option value="">-- Pilih Zon --</option>
+                            <option value="WLY01">Kuala Lumpur</option>
+                            <option value="WLY02">Putrajaya</option>
+                            <option value="SGR01">Selangor (Petaling/Hulu Langat/Gombak dll.)</option>
+                            <option value="SGR02">Selangor (Kuala Selangor/Sabak Bernam)</option>
+                            <option value="JHR02">Johor (JB/Kota Tinggi/Mersing)</option>
+                            <option value="PNG01">Pulau Pinang</option>
+                            <option value="PRK01">Perak (Ipoh/Kuala Kangsar)</option>
+                            <option value="KDH01">Kedah (Kota Setar/Kubang Pasu)</option>
+                            <option value="KTN01">Kelantan (Kota Bharu)</option>
+                            <option value="TRG01">Terengganu (K. Terengganu)</option>
+                            <option value="PHG01">Pahang (Kuantan)</option>
+                            <option value="NGS01">Negeri Sembilan (Seremban)</option>
+                            <option value="MLK01">Melaka</option>
+                            <option value="PLS01">Perlis</option>
+                            <option value="SBH01">Sabah (Kota Kinabalu)</option>
+                            <option value="SWK01">Sarawak (Kuching)</option>
+                        </select>
+                        <button id="searchBtn" class="btn-search"><span data-icon="search"></span> Cari</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section id="result" class="result-section hidden" aria-live="polite"></section>
+
+        <div class="home-footer">
+            <button id="reminderBtn" class="btn-reminder hidden"><span data-icon="clipboard-list"></span> Urus Senarai
+                Ibadah</button>
+            <p class="copyright">&copy; 2026 SolatTime. Data Sumber JAKIM.</p>
+        </div>
+
+    </main>
+
+    <script src="icons.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

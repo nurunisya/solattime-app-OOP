@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Senarai Semak Ibadah</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-overlay"></div>
+
+    <main class="container reminder-page">
+
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="brand-mark lg" data-icon="clipboard-list" data-size="28"></span>
+                <div>
+                    <h1>Senarai Ibadah</h1>
+                    <p class="subtitle">Rancang &amp; semak ibadah anda</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- message successful or unsuccessful -->
+        <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+
+        <section class="search-card form-card">
+            <h2 id="formTitle">Tambah Aktiviti Baru</h2>
+            <p class="hint">Pilih jenis ibadah dan waktu pelaksanaannya.</p>
+
+            <div class="form-row">
+                <label for="activityType" class="sr-only">Jenis ibadah</label>
+                <select id="activityType" class="grow-2">
+                    <option value="">-- Pilih Ibadah --</option>
+                    <option value="Solat Sunat Dhuha">Solat Sunat Dhuha</option>
+                    <option value="Baca Al-Quran">Baca Al-Quran</option>
+                    <option value="Zikir Pagi">Zikir Pagi</option>
+                    <option value="Zikir Petang">Zikir Petang</option>
+                    <option value="Baca Yasin">Baca Yasin</option>
+                    <option value="Solat Sunat Tahajjud">Solat Sunat Tahajjud</option>
+                    <option value="Bersedekah">Bersedekah</option>
+                    <option value="Lain-lain">Lain-lain (Taip Manual)</option>
+                </select>
+
+                <label for="customActivity" class="sr-only">Nama ibadah</label>
+                <input type="text" id="customActivity" class="text-input grow-2 hidden"
+                    placeholder="Taip ibadah anda..." maxlength="80" />
+
+                <label for="activityTime" class="sr-only">Waktu pelaksanaan</label>
+                <select id="activityTime" class="grow-1">
+                    <option value="Before">Sebelum Solat</option>
+                    <option value="After">Selepas Solat</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button id="addBtn" class="btn-search btn-block"><span data-icon="plus"></span> Tambah ke
+                    Senarai</button>
+                <button id="cancelBtn" class="btn-secondary hidden">Batal</button>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <div class="result-header list-header">
+                <h2>Senarai Anda</h2>
+                <p id="progressText" class="date-text"></p>
+            </div>
+            <ul id="reminderList" class="todo-list"></ul>
+        </section>
+
+        <div class="actions">
+            <button id="backBtn" class="btn-secondary"><span data-icon="arrow-left"></span> Kembali ke Waktu
+                Solat</button>
+        </div>
+
+    </main>
+
+    <script src="icons.js"></script>
+    <script src="reminder.js"></script>
+</body>
+
+</html>
